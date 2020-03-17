@@ -11,7 +11,7 @@ let mailTransporter = nodemailer.createTransport({
     secure: false,
     auth: { 
         user: 'adembaroudi3177@gmail.com',
-        pass: 'ademsouha3177'
+        pass: '******'
     } 
 });
 router.post("/send", function (req,res) {
