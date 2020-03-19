@@ -1,5 +1,10 @@
-var router = require('express').Router();
+var express = require('express');
+var router = express.Router();
 var users = require('./../models/UserSchema');
+var register = require('./registerapi');
+var login = require('./login');
+router.use('/register', register);
+router.use('/login',login);
 router.post("/insertdata", function(req,res){
     var user = new users(req.body);
     user.save(function (err) {
